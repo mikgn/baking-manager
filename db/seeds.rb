@@ -25,5 +25,5 @@ Product.create!(
 )
 
 puts
-puts '#3 Products created'
+puts '#4 Products created'
 puts

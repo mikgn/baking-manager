@@ -1,0 +1,94 @@
+ru:
+  active_admin:
+    tabs:
+      recipes: Рецепты
+      products: Продукты
+
+  time:
+    formats:
+      long: '%d.%m.%Y %H:%M'
+
+  activerecord:
+    models:
+      recipe:
+        one: Рецепт
+        few: Рецепта
+        many: Рецептов
+        other: Рецепты
+      element:
+        one: Полуфабрикат
+        few: Полуфабриката
+        many: Полуфабрикатов
+        other: Полуфабрикаты
+      ingredient:
+        one: Ингредиент
+        few: Ингредиента
+        many: Ингредиентов
+        other: Ингредиенты
+      product:
+        one: Продукт
+        few: Продукта
+        many: Продуктов
+        other: Продукты
+
+    attributes:
+      recipe:
+        title: Название
+        body: Описание
+        weight: Вес готового блюда (кг)
+        cost_price: Себестоимость (руб)
+        price: Цена (руб)
+        elements: Полуфабрикаты
+        element_ids: Полуфабрикаты
+        created_at: Создано
+        updated_at: Обновлено
+      element:
+        title: Название
+        description: Описание
+        actual_weight: Вес готового полуфабриката (кг)
+        price: Себестоимость (руб)
+        created_at: Создано
+        updated_at: Обновлено
+        product_id: Продукт
+        ingredients: Ингредиенты
+        recipe_id: Рецепт
+      ingredient:
+        title: Название
+        body: Описание
+        weight_kg: Вес (кг)
+        volume_liter: Объем (л)
+        count: Кол-во
+        price: Себестоимость (руб)
+        created_at: Создано
+        updated_at: Обновлено
+        product: Продукт
+      product:
+        title: Название
+        body: Описание
+        weight_kg: Вес (кг)
+        volume_liter: Объем (л)
+        count: Кол-во
+        price_ruble: Цена (руб)
+        ingredients: Ингредиенты
+        created_at: Создано
+        updated_at: Обновлено
+
+    errors:
+      models:
+        recipe:
+          attributes:
+            title:
+              blank: Укажите название рецепта
+        product:
+          attributes:
+            title:
+              blank: Укажите название продукта
+
+  formtastic:
+    :yes: 'Да'
+    :no: 'Нет'
+    :create: 'Создать %{model}'
+    :update: 'Обновить %{model}'
+    :submit: 'Отправить %{model}'
+    :cancel: 'Отменить %{model}'
+    :reset: 'Сбросить %{model}'

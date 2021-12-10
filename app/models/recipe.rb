@@ -6,10 +6,10 @@ class Recipe < ApplicationRecord
   validates :title, presence: true, uniqueness: true
 
   def cost_price
-    elements.sum(&:price)
+    elements.sum { |element| element.price || 0 }
   end
 
   def weight
-    elements.sum(&:actual_weight)
+    elements.sum { |element| element.actual_weight || 0 }
   end
 end

@@ -7,7 +7,7 @@ ActiveAdmin.register Element do
 
   index do
     column :title
-    column 'Cost Price', :price
+    column :price
     column :actual_weight
     column :created_at
     column :updated_at
@@ -18,11 +18,11 @@ ActiveAdmin.register Element do
   show do
     attributes_table_for element do
       row :title
-      row 'Cost Price', :price do |element|
+      row :description
+      row :actual_weight
+      row :price do |element|
         element.price
       end
-      row :actual_weight
-      row :description
       row :ingredients do
         element.ingredients.each do |ingredient|
           link_to(ingredient.title, admin_element_ingredient_path(element, ingredient))
@@ -39,16 +39,15 @@ ActiveAdmin.register Element do
       f.input :description
 
       f.has_many :ingredients, allow_destroy: true do |ingredient|
-        ingredient.inputs 'element products' do
+        ingredient.inputs :ingredients do
           ingredient.input :product,
-                           label: 'product',
                            as: :select,
                            collection: Product.pluck(:title, :id),
                            display_name: :title
 
-          ingredient.input :weight_kg, label: 'weight'
-          ingredient.input :volume_liter, label: 'volume'
-          ingredient.input :count, label: 'count'
+          ingredient.input :weight_kg
+          ingredient.input :volume_liter
+          ingredient.input :count
         end
       end
     end

@@ -4,7 +4,7 @@ class CreateElements < ActiveRecord::Migration[6.0]
       t.string :title, null: false, unique: true
       t.text :description
       t.float :actual_weight
-      t.references :recipe, foreign_key: false
+      t.references :recipe, index: true
 
       t.timestamps
     end

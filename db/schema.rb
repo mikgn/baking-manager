@@ -38,12 +38,12 @@ ActiveRecord::Schema.define(version: 2021_12_07_153048) do
   end
 
   create_table "ingredients", force: :cascade do |t|
-    t.bigint "product_id"
-    t.bigint "element_id"
     t.text "body"
     t.float "weight_kg"
     t.float "volume_liter"
     t.integer "count"
+    t.bigint "product_id"
+    t.bigint "element_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["element_id"], name: "index_ingredients_on_element_id"
