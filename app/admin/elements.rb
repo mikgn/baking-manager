@@ -1,4 +1,6 @@
 ActiveAdmin.register Element do
+  decorate_with ElementDecorator
+
   menu priority: 2
 
   belongs_to :recipe, optional: true
@@ -7,8 +9,8 @@ ActiveAdmin.register Element do
 
   index do
     column :title
-    column :price
     column :actual_weight
+    column :price
     column :created_at
     column :updated_at
 
@@ -31,7 +33,7 @@ ActiveAdmin.register Element do
     end
   end
 
-  form do |f|
+  form decorate: true do |f|
     f.inputs do
       f.semantic_errors
       f.input :title

@@ -1,4 +1,6 @@
 ActiveAdmin.register Recipe do
+  decorate_with RecipeDecorator
+
   menu priority: 1
 
   includes :elements
@@ -14,10 +16,10 @@ ActiveAdmin.register Recipe do
   show do
     attributes_table_for recipe do
       row :title
+      row :body
       row :weight
       row :cost_price
       row :price
-      row :body
       row :elements do
         recipe.elements.each do |element|
           link_to(element.title, admin_recipe_element_path(recipe, element))
@@ -26,7 +28,7 @@ ActiveAdmin.register Recipe do
     end
   end
 
-  form do |f|
+  form decorate: true do |f|
     f.inputs do
       f.semantic_errors
       f.input :title

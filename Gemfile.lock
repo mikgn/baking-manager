@@ -51,6 +51,10 @@ GEM
       globalid (>= 0.3.6)
     activemodel (6.0.4.1)
       activesupport (= 6.0.4.1)
+    activemodel-serializers-xml (1.0.2)
+      activemodel (> 5.x)
+      activesupport (> 5.x)
+      builder (~> 3.1)
     activerecord (6.0.4.1)
       activemodel (= 6.0.4.1)
       activesupport (= 6.0.4.1)
@@ -84,6 +88,13 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.4.4)
+    draper (4.0.2)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
+      activemodel-serializers-xml (>= 1.0)
+      activesupport (>= 5.0)
+      request_store (>= 1.0)
+      ruby2_keywords
     erubi (1.10.0)
     ffi (1.15.4)
     formtastic (4.0.0)
@@ -182,6 +193,8 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    request_store (1.5.0)
+      rack (>= 1.4)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -256,6 +269,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   devise
+  draper
   i18n
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
