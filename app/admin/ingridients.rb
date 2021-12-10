@@ -18,6 +18,7 @@ ActiveAdmin.register Ingredient do
   show do
     attributes_table_for ingredient do
       row :title
+      row :body
       row :weight_kg
       row :volume_liter
       row :count

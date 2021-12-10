@@ -1,0 +1,81 @@
+ru:
+  active_admin:
+    tabs:
+      recipes: Рецепты
+      products: Продукты
+
+  time:
+    formats:
+      long: '%d.%m.%Y %H:%M'
+
+  activerecord:
+    models:
+      recipe:
+        one: Рецепт
+        few: Рецепта
+        many: Рецептов
+        other: Рецепты
+      element:
+        one: Полуфабрикат
+        few: Полуфабриката
+        many: Полуфабрикатов
+        other: Полуфабрикаты
+      ingredient:
+        one: Ингредиент
+        few: Ингредиента
+        many: Ингредиентов
+        other: Ингредиенты
+      product:
+        one: Продукт
+        few: Продукта
+        many: Продуктов
+        other: Продукты
+
+    attributes:
+      recipe:
+        title: Название
+        body: Описание
+        weight: Вес готового блюда
+        cost_price: Себестоимость
+        price: Цена
+        elements: Полуфабрикаты
+        created_at: Создано
+        updated_at: Обновлено
+      element:
+        title: Название
+        description: Описание
+        actual_weight: Вес готового полуфабриката
+        price: Себестоимость
+        ingredients: Ингредиенты
+        recipe_id: Рецепт
+        created_at: Создано
+        updated_at: Обновлено
+      ingredient:
+        body: Описание
+        weight_kg: Вес (кг)
+        volume_liter: Объем (л)
+        count: Кол-во
+        price: Себестоимость
+        created_at: Создано
+        updated_at: Обновлено
+      product:
+        title: Название
+        body: Описание
+        weight_kg: Вес (кг)
+        volume_liter: Объем (л)
+        count: Кол-во
+        price_ruble: Цена
+        ingredients: Ингредиенты
+        created_at: Создано
+        updated_at: Обновлено
+
+    errors:
+      models:
+        recipe:
+          attributes:
+            title:
+              blank: Укажите название рецепта
+        product:
+          attributes:
+            title:
+              blank: Укажите название продукта
