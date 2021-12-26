@@ -26,4 +26,14 @@ Product.create!(
 
 puts
 puts '#4 Products created'
+
+if Rails.env.development?
+  AdminUser.create!(
+    email: 'admin@example.com',
+    password: 'password',
+    password_confimation: 'password'
+  )
+end
+
+puts '#Admin created'
 puts

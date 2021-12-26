@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Element < ApplicationRecord
   has_many :ingredients, dependent: :delete_all
 
