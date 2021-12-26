@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ActiveAdmin.register Element do
   decorate_with ElementDecorator
 
@@ -22,9 +24,7 @@ ActiveAdmin.register Element do
       row :title
       row :description
       row :actual_weight
-      row :price do |element|
-        element.price
-      end
+      row :price, &:price
       row :ingredients do
         element.ingredients.each do |ingredient|
           link_to(ingredient.title, admin_element_ingredient_path(element, ingredient))

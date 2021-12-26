@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ActiveAdmin.register Ingredient do
   decorate_with IngredientDecorator
 

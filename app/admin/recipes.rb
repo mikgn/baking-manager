@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ActiveAdmin.register Recipe do
   decorate_with RecipeDecorator
 
