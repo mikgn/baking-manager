@@ -11,6 +11,9 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  # allowed networks
+  config.web_console.whitelisted_ips = %w[172.20.0.1 172.19.0.1 172.23.0.1]
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
