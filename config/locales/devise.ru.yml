@@ -6,4 +6,5 @@ ru:
 
     failure:
       admin_user:
+        invalid: Неправильная почта и пароль
         unauthenticated: Вышли из системы
