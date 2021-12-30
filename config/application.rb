@@ -23,7 +23,6 @@ Bundler.require(*Rails.groups)
 
 module Bakingmanager
   class Application < Rails::Application
-    config.web_console.permissions = '172.23.0.1'
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
