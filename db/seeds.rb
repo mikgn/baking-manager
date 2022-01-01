@@ -33,7 +33,6 @@ if Rails.env.development?
     password: 'password',
     password_confirmation: 'password'
   )
-end
 
-puts '#Admin created'
-puts
+  puts '#Admin created'
+end

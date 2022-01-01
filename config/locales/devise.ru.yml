@@ -7,4 +7,5 @@ ru:
     failure:
       admin_user:
         invalid: Неправильная почта и пароль
+        not_found_in_database: Неправильная почта и пароль
         unauthenticated: Вышли из системы
